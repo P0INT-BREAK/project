@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>
+
+    {% block title %}
+
+
+    {% endblock title %}
+
+  </title>
+  <meta content="Your page description here" name="description">
+  <meta content="keywords, related, to, your, page" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Poppins:wght@300;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  {% block stylecss %}
+
+  {% endblock stylecss %}
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="{% static 'image/round_profile1.jpg' %}" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">ANAL C D</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="{% if request.path == '/' %}#home{% else %}/{% endif %}"
+            class="{% if request.path == '/#home' %}active{% endif %}"><i class="bi bi-house navicon"></i> Home</a></li>
+        <li>
+          <a href="{% if request.path == '/' %}#about{% else %}/{% endif %}"
+            class="{% if request.path == '/#about' %}active{% endif %}"><i
+              class="bi bi-file-earmark-person navicon"></i> About</a>
+        </li>
+        <li><a href="{% if request.path == '/' %}#resume{% else %}/#resume{% endif %}"><i
+              class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="{% if request.path == '/' %}#contact{% else %}/#contact{% endif %}"><i
+              class="bi bi-person navicon"></i> Contact</a></li>
+
+
+        <!-- <li class="dropdown"><a href="#"><i class="bi bi-grid navicon"></i> <span> More</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul id="dropdown-menu" class="dropdown-menu">
+            <li><a href="/projects" class="{% if request.path == '/projects' %}active{% endif %}"><i
+                  class="bi bi-archive-fill navicon"></i> projects</a></li>
+            {% if not request.user.is_authenticated %}
+            <li><a href="/auth/login" class="{% if request.path == '/auth/login' %}active{% endif %}"><i
+                  class="bi bi-person-check navicon"></i> Admin login</a></li>
+            {% else %}
+            <li><a href="/auth/logout" class="{% if request.path == '/auth/logout' %}active{% endif %}"><i
+                  class="bi bi-power navicon"></i> Logout</a></li>
+            {% endif %}
+          </ul>
+        </li> -->
+      </ul>
+    </nav>
+
+    <div class="copyright text-center fs-6" style="color: #aaa; opacity: 0.4;">
+      </p>© <span>Copyright</span> <class="px-1 sitename fs-6">iPortfolio <span>All Rights Reserved</span>
+        <class="credits fs-6">Designed by <a href="https://bootstrapmade.com/" class="fs-6">BootstrapMade</a></div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+
+    {% block bg %}
+
+
+    {% endblock bg %}
+
+
+
+    <!-- Body Section -->
+
+    {% block body %}
+
+    {% endblock body %}
+
+  </main>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+
+  {% block script %}
+
+  {% endblock script %}
+
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

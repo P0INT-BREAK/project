@@ -1,0 +1,273 @@
+{% extends "basic.html" %}
+
+{% block title %} Protfolio {% endblock title %}
+<!-- background image -->
+
+{% block bg %}
+{% load static %}
+<section id="home" class="hero section dark-background">
+
+  <img src="{% static 'image/bg_img1.jpg' %}" alt="" data-aos="fade-in" class="img-fluid">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2>ANAL C D</h2>
+    <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, engineer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+    <!-- Download Resume Button -->
+    <div class="mt-4">
+      <a href="{% static 'assets/download/Resume.pdf' %}" download class="btn btn-primary">
+        Download My Resume
+      </a>
+    </div>
+  </div>
+
+</section>
+{% endblock bg %}
+{% block body %}
+{% load static %}
+
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+<!-- About Section -->
+<section id="about" class="about section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About</h2>
+    <p>Fresh graduate with a Bachelor's degree in Electronic and Communication Technology. Skilled in machine learning,
+      Django, Python programming, data analysis, and algorithm development, with hands-on experience in high-accuracy
+      models for spam mail and diabetes prediction. Passionate about applying technical skills to practical projects and
+      continuously expanding my expertise.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 justify-content-center">
+      <div class="col-lg-4">
+        <img src="{% static 'image/profile.jpg' %}" class="img-fluid" alt="Profile Picture">
+      </div>
+      <div class="col-lg-8 content">
+        <h2>Machine Learning Enthusiast &amp; Aspiring Data Analyst</h2>
+        <p class="fst-italic py-3">
+          Experienced in developing websites using Django for backend and Bootstrap for frontend, with additional
+          guidance from YouTube tutorials and ChatGPT support.
+        </p>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>31 July 2003</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a
+                    href="https://www.linkedin.com/in/anal-c-d">www.linkedin.com/in/anal-c-d</a></span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>9746424810</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chalakudy, India</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Technology in
+                  Electronics and Communication</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>analcdchakkalakal@gmail.com</span>
+              </li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="py-3">
+          Known for critical thinking, problem-solving, and teamwork. Dedicated to advancing technical skills in Python,
+          Django, and machine learning. Active in sports, with achievements in Kabaddi at the university D-Zone level.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" class="resume section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p>An overview of my educational background, key projects, and relevant skills.</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Summary</h3>
+        <div class="resume-item pb-0">
+          <h4>Anal C D</h4>
+          <p><em>Fresher with experience in Django, machine learning, Python programming, and data analysis. Developed
+              several machine learning models for practical applications.</em></p>
+          <ul>
+            <li>Chalakudy, India</li>
+            <li>9746424810</li>
+            <li>analcdchakkalakal@gmail.com</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item">
+          <h4>Bachelor of Technology in Electronics and Communication</h4>
+          <h5>Until 6th Semester - CGPA: 6.51</h5>
+          <p><em>Adi Shankara Institute of Engineering and Technology, Kalady</em></p>
+        </div>
+        <div class="resume-item">
+          <h4>Higher Secondary Education</h4>
+          <h5>Jul 2021</h5>
+          <p><em>St Sebastian Higher Secondary School, Kuttikad</em></p>
+          <p>Final Score: 97.3%</p>
+        </div>
+        <div class="resume-item">
+          <h4>Secondary Education</h4>
+          <h5>Mar 2019</h5>
+          <p><em>St Sebastian Higher Secondary School, Kuttikad</em></p>
+          <p>Final Score: 100%</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title">Projects</h3>
+        <div class="resume-item">
+          <h4>Machine Learning Model for Identifying Spam Mail</h4>
+          <p>Developed a model using Support Vector Machine (SVM) classifier, achieving around 90% accuracy.</p>
+          <ul>
+            <li>Used TF-IDF Vectorizer to identify words common in spam emails</li>
+            <li>Achieved a high accuracy rate in differentiating spam from legitimate emails</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Machine Learning Model for Diabetes Prediction</h4>
+          <p>Developed a predictive model for classifying diabetic vs. non-diabetic individuals based on various
+            features.</p>
+          <ul>
+            <li>Implemented SVM classifier with an accuracy score of 92%</li>
+            <li>Data preprocessing included standardization for improved accuracy</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Achievements & Awards</h3>
+        <div class="resume-item">
+          <ul>
+            <li>Machine Learning and Data Science Certification, Dept. of Electronics and Communication Engineering,
+              ASIET (Sept-Nov 2023)</li>
+            <li>Advanced Deep Learning for Computer Vision, ASIET (Feb-Apr 2024)</li>
+            <li>University D-Zone Kabaddi, 3rd Place</li>
+            <li>Rajya Puraskar (Governor's Award) – The highest state-level award in Scouts and Guides, recognizing
+              dedication, skills, and commitment to the principles of scouting and guiding (2018)</li>
+            <li>CM Shield – Awarded in recognition of service to society and contributions to the Scouts and Guides
+              movement at the higher secondary level (2021)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills</h2>
+    <p>A diverse skill set combining technical, analytical, and interpersonal abilities.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row skills-content">
+
+      <!-- Technical Skills Column -->
+      <div class="col-lg-6">
+        <h4><i class="bi bi-laptop"></i> Technical Skills</h4>
+        <ul class="skills-list">
+          <li><i class="bi bi-check-circle-fill"></i> Python Programming</li>
+          <li><i class="bi bi-check-circle-fill"></i> Django Web Framework</li>
+          <li><i class="bi bi-check-circle-fill"></i> Machine Learning</li>
+          <li><i class="bi bi-check-circle-fill"></i> Data Analysis</li>
+          <li><i class="bi bi-check-circle-fill"></i> Algorithm Development</li>
+        </ul>
+      </div>
+
+      <!-- Language Skills Column -->
+      <div class="col-lg-6">
+        <h4><i class="bi bi-globe"></i> Language Skills</h4>
+        <ul class="skills-list">
+          <li><i class="bi bi-check-circle-fill"></i> English</li>
+          <li><i class="bi bi-check-circle-fill"></i> Malayalam</li>
+          <li><i class="bi bi-check-circle-fill"></i> Hindi</li>
+          <li><i class="bi bi-check-circle-fill"></i> Tamil</li>
+        </ul>
+      </div>
+
+      <!-- Additional Skills Column -->
+      <div class="col-lg-6 mt-4">
+        <h4><i class="bi bi-people"></i> Professional Skills</h4>
+        <ul class="skills-list">
+          <li><i class="bi bi-check-circle-fill"></i> Critical Thinking</li>
+          <li><i class="bi bi-check-circle-fill"></i> Problem Solving</li>
+          <li><i class="bi bi-check-circle-fill"></i> Teamwork & Leadership</li>
+          <li><i class="bi bi-check-circle-fill"></i> Effective Communication</li>
+        </ul>
+      </div>
+
+      <!-- Web Development Column -->
+      <div class="col-lg-6 mt-4">
+        <h4><i class="bi bi-code-slash"></i> Web Development</h4>
+        <ul class="skills-list">
+          <li><i class="bi bi-check-circle-fill"></i> Django (Backend)</li>
+          <li><i class="bi bi-check-circle-fill"></i> Bootstrap (Frontend)</li>
+          <li><i class="bi bi-check-circle-fill"></i> HTML & CSS</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Get in touch using the following contact information:</p>
+  </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      <div class="col-lg-5 d-flex align-items-stretch">
+        <div class="info-wrap w-100">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>Chakkalakal House, Chattikulam, Chalakudy</p>
+              <p>Thrissur, Kerala, India</p>
+            </div>
+          </div>
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Mobile Number</h3>
+              <p>+91 9746424810</p>
+            </div>
+          </div>
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:analcdchakkalakal@gmail.com">analcdchakkalakal@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 d-flex align-items-stretch">
+        <div class="map-wrap w-100" data-aos="fade-up" data-aos-delay="500">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d981.249776602313!2d76.38837982837579!3d10.341955799358708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDIwJzMxLjAiTiA3NsKwMjMnMjAuNSJF!5e0!3m2!1sen!2sin!4v1729974864774!5m2!1sen!2sin"
+            width="600" height="450" style="border:0; width: 100%; height: 100%; max-height: 400px;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}
