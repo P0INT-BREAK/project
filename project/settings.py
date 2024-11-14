@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ['myprotfolio-anal.onrender.com','localhost','127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.staticfiles'
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
